@@ -1,0 +1,5 @@
+-Plugins: phpMailer,sweetAlert;
+-Panel: files, conexion,controla.php;
+-reclamaciones: todos;
+-transparencia: resolucion-alcaldia.php;
+

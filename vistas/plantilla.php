@@ -10,11 +10,11 @@ session_start();
     <head>
     <meta charset="utf-8" lang="es">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Sistema de Reportes</title>
+    <title>Administrador WEB FS</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
-    <link rel="icon" href="vistas/dist/img/iconomuni.jpg">
+    <link rel="icon" href="vistas/dist/img/icono.png">
 
     <!--=====================================
     PLUGINS DE CSS
@@ -120,6 +120,7 @@ session_start();
                     if($_GET["ruta"] == "inicio" ||
                         $_GET["ruta"] == "usuarios" ||
                         $_GET["ruta"] == "eventos" ||
+                        $_GET["ruta"] == "videos" ||
                         $_GET["ruta"] == "salir"){
 
                         include "modulos/".$_GET["ruta"].".php";
@@ -146,7 +147,7 @@ session_start();
         <script src="vistas/js/plantilla.js"></script>
         <script src="vistas/js/usuarios.js"></script>
         <script src="vistas/js/eventos.js"></script>
-
+        <script src="vistas/js/videos.js"></script>
 
 
 

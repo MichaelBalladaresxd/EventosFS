@@ -2,7 +2,7 @@
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
       <img src="vistas/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <span class="brand-text font-weight-light">GrupoFS</span>
     </a>
 
     <!-- Sidebar -->
@@ -46,14 +46,20 @@
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="usuarios" class="nav-link">
-              <i class="nav-icon far fa fa-users"></i>
-              <p>
-                Usuarios
-              </p>
-            </a>
-          </li>
+          <?php
+
+            if ($_SESSION['perfil']=="Administrador") {
+              echo '<li class="nav-item">
+              <a href="usuarios" class="nav-link">
+                <i class="nav-icon far fa fa-users"></i>
+                <p>
+                  Usuarios
+                </p>
+              </a>
+            </li>';
+            }
+
+          ?>
 
           <li class="nav-item">
             <a href="eventos" class="nav-link">
@@ -63,6 +69,16 @@
               </p>
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="videos" class="nav-link">
+              <i class="nav-icon far fa fa-video"></i>
+              <p>
+                Videos Cursos
+              </p>
+            </a>
+          </li>
+
           <!-- <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon far fa fa-plus-square"></i>

@@ -38,8 +38,8 @@
                         <tr>
                             <th style="whidt:10px">#</th>                     
                             <th>Titulo del Evento</th>
-                            <th>Fecha</th>
                             <th>Hora</th>
+                            <th>Fecha</th>
                             <th>Inscripción</th>
                             <th>Archivo</th>
                             <th>Acciones </th>
@@ -62,7 +62,7 @@
                                 <td>'.$value["ver_fecha"].'</td>';
                                 echo '<td>'.$value["fecha_evento"].'</td>';
                                 echo '<td>'.$value["comentarios_text"].'</td>';
-                                echo '<td><img src="https://www.grupofs.com/imagenes/'.$value["archivo_archivos"].'" class="img-thumbnail" width="100px"></td>';
+                                echo '<td><img src="vistas/dist/img/iconomuni.jpg" class="img-thumbnail img-fluid" width="100px"></td>';
                                
                                 echo'
                                 <td>
@@ -124,60 +124,50 @@
 
             <div class="form-group">
                 <div class="row">
-                <div class="input-group date col-md-6 col-6" id="reservationdate" data-target-input="nearest">
-                    <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
-                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    <div class="input-group date col-md-6 col-12" id="reservationdate" data-target-input="nearest">
+                        <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                            <div class="input-group-text"><i class="fa fa-calendar"></i> </div>
+                            <input type="text" class="form-control col-md-9 col-12 datetimepicker-input" placeholder="Ingresa fecha" data-target="#reservationdate" required/>
+                        </div>
                     </div>
-                    <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate" required/>
+
+                    <div class="custom-control custom-checkbox col-md-6 col-12 text-center">
+                        <input class="custom-control-input" type="checkbox" id="customCheckbox1" >
+                        <label for="customCheckbox1" class="custom-control-label">Fechas Múltiples</label>
+                    </div>
                 </div>
 
-
-                <div class="custom-control custom-checkbox col-md-5 col-5">
-                    <input class="custom-control-input" type="checkbox" id="customCheckbox1" value="Check">
-                    <label for="customCheckbox1" class="custom-control-label">Fechas Múltiples</label>
-                </div>
-                </div>
             </div>     
 
 
                     <!-- Input Extra Fechas Multiples -->
-            <div class="form-group" style="display:none;"> 
+            <div class="form-group" id="txtFechaMulti"> 
                 <div class="input-group-prepend">
                     <span class="input-group-text"><i class="fas fa-calendar"></i></span>
 
-                    <input type="text" class="form-control input-sm" name="txtFechMultiples"  autocomplete="off" placeholder="Ingrese Fechas Múltiples" id="FechMultiples" required>
+                    <input type="text" class="form-control input-sm" name="txtFechMultiples"  autocomplete="off" placeholder="Ingrese Fechas Múltiples en texto" id="FechMultiples" required>
                 </div>
             </div>
-           
-
-            <div class="form-group">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-clipboard"></i></span>
-
-                    <input type="text" class="form-control input-sm" name="txtLink"  autocomplete="off" placeholder="Ingrese Link de Inscripción" id="nuevoLink" required>
-                </div>
-            </div>
-
            
 
             <div class="form-group">
                
                 <div class="row">
-                    <div class="input-group-prepend col-md-6 col-5">
+                    <div class="input-group-prepend col-md-6 col-12">
                         <span class="input-group-text"><i class="fas fa-file-archive"></i></span>
 
-                        <select class="form-control input-sm" name="nuevoArchivo">
-                            <option value="">Seleccionar Opcion</option>
+                        <select class="form-control input-sm" name="nuevoInscripcion" id="cmbInscripcion">
+                            <option value="">Selec. Inscripción</option>
                             <option value="Link">Link</option>
                             <option value="Archivo">Archivo</option>
                         </select>
                     </div>
 
-                    <div class="input-group-prepend col-md-6 col-6" id="txtLinkCmb" style="display:none;">
-                        <input type="text" class="form-control input-sm" name="txtLink"  autocomplete="off" placeholder="Ingrese Link de Inscripción" id="nuevoLink" required>
+                    <div class="input-group-prepend col-md-6 col-12" id="txtLinkCmb">
+                        <input type="text" class="form-control input-sm" id="txtlink" name="txtLink"  autocomplete="off" placeholder="Ingrese Link" id="nuevoLink" required>
                     </div>
 
-                    <input type="file" class="AdjuntoLink col-md-6 col-6" name="txtAdjuntoLink">
+                    <input type="file" class="AdjuntoLink col-md-6 col-12" id="archiveAdjuntoLink" name="txtAdjuntoLink">
 
                 </div>
 
@@ -185,10 +175,11 @@
 
             <div class="input-group mb-3">
                 <div class="custom-file">
-                    <input type="file" cclass="nuevaFoto" name="txtAdjunto" >
-                    <label class="custom-file-label" for="inputGroupFile03">Seleccionar Archivo</label>
+                    <input type="file" class="nuevaFoto" name="txtAdjunto" >
+                    <label class="custom-file-label" for="inputGroupFile03">Seleccionar Brochure</label>
 
                 </div>
+
             </div>
 
 
@@ -199,7 +190,7 @@
       <div class="modal-footer">
         
         <button type="button" class="btn btn-secondary pull-left" data-dismiss="modal" >Salir</button>
-        <button type="submit" class="btn btn-success" >Guardar Usuario</button>
+        <button type="submit" class="btn btn-success" >Guardar Evento</button>
 
       </div>
 

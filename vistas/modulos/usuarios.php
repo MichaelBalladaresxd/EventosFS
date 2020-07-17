@@ -172,8 +172,7 @@
                         <select class="form-control input-sm" name="nuevoPerfil">
                             <option value="">Seleccionar Perfil</option>
                             <option value="Administrador">Administrador</option>
-                            <option value="Especial">Especial</option>
-                            <option value="Vendedor">Vendedor</option>
+                            <option value="Usuario">Usuario</option>
                         </select>
                     </div>
                 </div>
@@ -280,8 +279,7 @@
                             <select class="form-control input-sm" name="editarPerfil">
                                 <option value="" id="editarPerfil"></option>
                                 <option value="Administrador">Administrador</option>
-                                <option value="Especial">Especial</option>
-                                <option value="Vendedor">Vendedor</option>
+                                <option value="Usuario">Usuario</option>
                             </select>
                         </div>
                     </div>

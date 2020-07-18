@@ -66,7 +66,7 @@
                   echo '<h3>'.count($eventos).'</h3>';
               ?>
 
-                <p>Eventos</p>
+                <p>Eventos/Cursos</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -79,14 +79,20 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>65</h3>
+              <?php
+                   $item = null;
+                   $valor = null;
+                   $videos = ControladorVideos::ctrMostrarVideo($item,$valor);
 
-                <p>Unique Visitors</p>
+                  echo '<h3>'.count($videos).'</h3>';
+              ?>
+
+                <p>Videos Subidos</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-videocamera"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="videos" class="small-box-footer">Más Informacion<i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->

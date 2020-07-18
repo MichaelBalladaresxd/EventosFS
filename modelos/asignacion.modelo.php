@@ -1,5 +1,5 @@
 <?php
-    require_once'conexion.php';
+    require_once 'https://www.grupofs.com/Connections/conexion.php';
 
     Class ModeloAsignacion{
         static public function mdlIngresarAsignacion($tabla,$datos){

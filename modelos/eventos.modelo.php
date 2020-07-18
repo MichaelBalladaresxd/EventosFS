@@ -1,5 +1,7 @@
 <?php
 
+require_once 'conexion.php';
+
 class ModeloEventos{
 
     static public function mdlMostrarEventos($tabla, $item, $valor){

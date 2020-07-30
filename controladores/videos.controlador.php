@@ -68,7 +68,7 @@ class ControladorVideos{
 
                         if(result.value){
 
-                                window.location = "eventos";
+                                window.location = "videos";
                         }
 
 
@@ -148,7 +148,7 @@ class ControladorVideos{
 
                         if(result.value){
 
-                                window.location = "eventos";
+                                window.location = "videos";
                         }
 
 

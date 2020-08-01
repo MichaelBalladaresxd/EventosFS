@@ -82,7 +82,7 @@ class ControladorVideos{
                 swal({
 
                             type:"error",
-                            title: "¡Ups!"'.$respuesta.'",
+                            title: "¡Ups!",
                             showConfirmButton: true,
                             confirmButtonText: "Cerrar",
                             closeOnConfirm: false

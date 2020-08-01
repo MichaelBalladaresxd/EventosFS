@@ -232,89 +232,89 @@
 
             <form role="form" method="post" enctype="multipart/form-data">
 
-            <div class="modal-header" style="background:#222d32; color:white;">
-                <h5 class="modal-title">Editar Usuario</h5>
+                <div class="modal-header" style="background:#222d32; color:white;">
+                    <h5 class="modal-title">Editar Usuario</h5>
 
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">               
-                    <span aria-hidden="true">&times;</span>          
-                </button>
-                
-
-            </div>
-
-            <div class="modal-body">
-
-                <div class="box-body">
-
-                    <div class="form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-user"></i></span>
-
-                            <input type="text" class="form-control input-sm" id="editarNombre" name="editarNombre" value="" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-key"></i></span>
-
-                            <input type="text" class="form-control input-sm" id="editarUsuario" name="editarUsuario" value="" readonly>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-lock"></i></span>
-
-                            <input type="password" class="form-control input-sm" name="editarPassword" placeholder="Ingrese Nueva Contraseña" >
-                            <input type="hidden" id="passwordActual" name="passwordActual">
-                        
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text"><i class="fa fa-users"></i></span>
-
-                            <select class="form-control input-sm" name="editarPerfil">
-                                <option value="" id="editarPerfil"></option>
-                                <option value="Administrador">Administrador</option>
-                                <option value="Usuario">Usuario</option>
-                            </select>
-                        </div>
-                    </div>
-
-                   
-                <div class="form-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text"><i class="fa fa-calendar"></i></span>
-
-                        <input type="date" class="form-control input-sm" id="editarNacimiento" name="editarNacimiento" placeholder="Ingrese Fecha de Nacimiento" required>
-                    </div>
-                </div>
-
-                    <div class="form-group">
-
-                        <div class="panel">Subir Foto</div>  
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">               
+                        <span aria-hidden="true">&times;</span>          
+                    </button>
                     
-                        <input type="file" class="nuevaFoto" name="editarFoto">
 
-                        <p class="help-block">Peso Maximo de la foto 2 MB</p>
+                </div>
 
-                        <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
-                        <input type="hidden" name="fotoActual" id="fotoActual">
+                <div class="modal-body">
+
+                    <div class="box-body">
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-user"></i></span>
+
+                                <input type="text" class="form-control input-sm" id="editarNombre" name="editarNombre" value="" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-key"></i></span>
+
+                                <input type="text" class="form-control input-sm" id="editarUsuario" name="editarUsuario" value="" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-lock"></i></span>
+
+                                <input type="password" class="form-control input-sm" name="editarPassword" placeholder="Ingrese Nueva Contraseña" >
+                                <input type="hidden" id="passwordActual" name="passwordActual">
+                            
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fa fa-users"></i></span>
+
+                                <select class="form-control input-sm" name="editarPerfil">
+                                    <option value="" id="editarPerfil"></option>
+                                    <option value="Administrador">Administrador</option>
+                                    <option value="Usuario">Usuario</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    
+                    <div class="form-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="fa fa-calendar"></i></span>
+
+                            <input type="date" class="form-control input-sm" id="editarNacimiento" name="editarNacimiento" placeholder="Ingrese Fecha de Nacimiento" required>
+                        </div>
+                    </div>
+
+                        <div class="form-group">
+
+                            <div class="panel">Subir Foto</div>  
+                        
+                            <input type="file" class="nuevaFoto" name="editarFoto">
+
+                            <p class="help-block">Peso Maximo de la foto 2 MB</p>
+
+                            <img src="vistas/img/usuarios/default/anonymous.png" class="img-thumbnail previsualizar" width="100px">
+                            <input type="hidden" name="fotoActual" id="fotoActual">
+                        </div>
+
                     </div>
 
                 </div>
 
-            </div>
+                <div class="modal-footer">
+                    
+                    <button type="button" class="btn btn-secondary pull-left" data-dismiss="modal" >Salir</button>
+                    <button type="submit" class="btn btn-success" >Modificar Usuario</button>
 
-            <div class="modal-footer">
-                
-                <button type="button" class="btn btn-secondary pull-left" data-dismiss="modal" >Salir</button>
-                <button type="submit" class="btn btn-success" >Modificar Usuario</button>
-
-            </div>
+                </div>
     
                     <?php
                         $editarUsuario = new ControladorUsuarios();

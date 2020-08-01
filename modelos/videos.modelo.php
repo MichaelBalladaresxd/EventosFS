@@ -49,7 +49,7 @@ class ModeloVideos{
             return "ok";
         }else{
 
-            return "error";
+            return "errores";
         }
         $stmt -> close();
 

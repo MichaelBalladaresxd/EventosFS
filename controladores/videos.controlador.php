@@ -76,6 +76,30 @@ class ControladorVideos{
                 
                 
                 </script>';
+            }else{
+                echo '<script>
+                
+                swal({
+
+                            type:"error",
+                            title: "¡Ups!"'.$respuesta.'",
+                            showConfirmButton: true,
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+
+
+                    }).then((result)=>{
+
+                        if(result.value){
+
+                                window.location = "videos";
+                        }
+
+
+                    });
+                
+                
+                </script>';
             }
 
         }

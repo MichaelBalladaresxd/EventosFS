@@ -36,9 +36,8 @@ class ModeloVideos{
     static public function mdlCrearVideo($tabla,$datos){
 
                 
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(id,nombre_video,link,area,usuario_registro) VALUES (:id, :nombre, :link, :area, :usuario) ");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre_video,link,area,usuario_registro) VALUES ( :nombre, :link, :area, :usuario) ");
 
-        $stmt -> bindParaam(":id",null,PDO::PARAM_STR);
         $stmt -> bindParam(":nombre",$datos["nombre_video"], PDO::PARAM_STR);
         $stmt -> bindParam(":link",$datos["link"], PDO::PARAM_STR);
         $stmt -> bindParam(":area",$datos["area"], PDO::PARAM_STR);
@@ -50,7 +49,7 @@ class ModeloVideos{
             return "ok";
         }else{
 
-            return "error";
+            return "error".$stmt->error();
         }
         $stmt -> close();
 
@@ -74,7 +73,7 @@ class ModeloVideos{
         }else{
 
             return "error";
-        }
+        }   
         $stmt -> close();
 
         $stmt = null;

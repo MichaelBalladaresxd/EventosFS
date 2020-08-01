@@ -18,12 +18,10 @@ class ControladorVideos{
         if(isset($_POST["nuevoTituloEvento"])){
 
             $tabla = "videos";
-            $datos = array(
-                "nombre_video" => $_POST["nuevoTituloEvento"],
+            $datos = array("nombre_video" => $_POST["nuevoTituloEvento"],
                 "link" => $_POST["nuevoLinkVideo"],
                 "area" => $_POST["nuevoAreaVideo"],
-                "usuario_registro" => $_POST["txtUsuarioRegistro"] 
-            );
+                "usuario_registro" => $_POST["txtUsuarioRegistro"]);
 
             $respuesta = ModeloVideos::mdlCrearVideo($tabla, $datos);
 

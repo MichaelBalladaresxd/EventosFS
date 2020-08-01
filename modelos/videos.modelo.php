@@ -38,6 +38,7 @@ class ModeloVideos{
                 
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla(nombre_video,link,area,usuario_registro) VALUES ( :nombre, :link, :area, :usuario) ");
 
+      
         $stmt -> bindParam(":nombre",$datos["nombre_video"], PDO::PARAM_STR);
         $stmt -> bindParam(":link",$datos["link"], PDO::PARAM_STR);
         $stmt -> bindParam(":area",$datos["area"], PDO::PARAM_STR);
@@ -47,9 +48,10 @@ class ModeloVideos{
         if($stmt->execute()){
 
             return "ok";
+
         }else{
 
-            return "errores";
+            return "error";
         }
         $stmt -> close();
 

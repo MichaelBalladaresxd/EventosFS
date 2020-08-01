@@ -51,7 +51,7 @@ class ControladorVideos{
 
                 </script>';
 
-            }else{
+            }else if($respuesta == "error"){
 
                 echo '<script>
                 
